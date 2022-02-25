@@ -1,0 +1,161 @@
+.header {
+    background: #000;
+    display: flex;
+    color: white;
+}
+
+.logo {
+    flex: 1;
+    margin: 0 0 0 1rem;
+    font-size: 3rem;
+}
+
+.header .user {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+    gap: .3rem;
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+}
+
+.user-box {
+    position: absolute;
+    width: 8rem;
+    right: 0;
+    top: -1rem;
+    background: #000;
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+    display: none;
+}
+
+.user-box li {
+    margin: .5rem 0;
+}
+
+.user-box a {
+    color: white;
+}
+
+.user-box #cikis {
+    color: var(--yellow);
+}
+
+.active {
+    display: block;
+}
+
+.active-yellow {
+    background: var(--yellow);
+}
+
+.maclar {
+    margin: 1rem 10rem;
+    background: #000;
+    color: white;
+    padding: 1rem;
+}
+
+.maclar-table {
+    padding: 1rem 0;
+}
+
+.maclar-table h3 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.maclar-table h3 img {
+    max-height: 2rem;
+}
+
+.mac-row {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+}
+
+.mac-row .mac-tarih {
+    flex: 1;
+}
+
+.mac-row .mac-takimlar {
+    flex: 2;
+    font-weight: bold;
+    display: flex;
+}
+
+.mac-row .mac-takimlar .mac-takim {
+    width: 10rem;
+    gap: 1rem;
+}
+
+.mac-row .mac-takimlar .mac-takim:last-child {
+    justify-content: flex-end;
+}
+
+.mac-row .mac-takimlar .mac-takim, .mac-row .mac-takimlar .mac-sonuc {
+    display: flex;
+    align-items: center;
+}
+.mac-row .mac-takimlar .mac-sonuc {
+    padding: 0 1rem;
+}
+
+.mac-row .takimlogo {
+    height: 1.5rem;
+}
+
+.mac-row .takimlogo img {
+    max-height: 1.5rem;
+}
+
+.mac-row .buttons button {
+    width: 2rem;
+    height: 2rem;
+    background: rgb(38, 38, 38);
+    margin: 0;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .maclar {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 465px) {
+    .logo {
+        font-size: 2rem;
+    }
+    .maclar h1 {
+        font-size: 1.2rem;
+    }
+    .maclar h3 {
+        font-size: 1rem;
+    }
+    .mac-row {
+        font-size: .8rem;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .mac-row .mac-takimlar .mac-takim {
+        width: 8rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 375px) {    
+    .mac-row .mac-takimlar .mac-takim {
+        width: 7rem;
+    }
+}
