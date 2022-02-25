@@ -118,6 +118,10 @@ body {
     transition-duration: 200ms;
 }
 
+.girisbtn {
+    margin-top: 1.5rem;
+}
+
 @media (max-width: 425px) {
     .login-container {
         padding: 1rem;
