@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+:root {
+    --black: rgb(47, 47, 48);
+    --bg: rgb(61, 64, 67);
+    --yellow: rgb(253, 233, 78);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+    background: var(--bg);
+    overflow-y: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-container {
+    background: var(--yellow);
+    padding: 2rem 4rem;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0 0 .5rem 0;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+.form-group, .sub-group {
+    display: flex;
+    flex-direction: column;
+    margin: .3rem;
+}
+
+.form input[type=text], .form input[type=email], .form input[type=number], .form input[type=password] {
+    height: 2rem;
+    width: 100%;
+    padding: .2rem;
+}
+
+.form label {
+    margin: .4rem 0;
+    font-weight: 500;
+}
+
+.form-group.wrap {
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+    justify-content: space-between;
+}
+
+.form-group.wrap .sub-group {
+    width: 100%;
+}
+
+.form-group.terms {
+    display: block;
+    margin: 1rem .3rem;
+}
+
+.form-group.terms a, .girisyap a {
+    font-weight: 700;
+    color: black;
+}
+
+.form input[type=submit] {
+    background: #000;
+    color: white;
+    height: 2.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.girisyap {
+    padding: .7rem 0;
+    text-align: center;
+}
+
+.login-container a:hover {
+    color: var(--bg);
+    transition-duration: 200ms;
+}
+
+@media (max-width: 425px) {
+    .login-container {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+}
