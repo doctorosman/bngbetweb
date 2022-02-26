@@ -1,0 +1,171 @@
+.header {
+    background: #000;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 0 0 1rem;
+    font-size: 3rem;
+}
+
+.header .links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header .links a {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .9rem;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.header .links a:hover {
+    background: var(--yellow);
+    color: #000;
+    transition-duration: 300ms;
+}
+
+.header .links a i {
+    font-size: 1.6rem;
+}
+
+.header .user {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding-right: 1rem;
+    gap: .3rem;
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+}
+
+.user-box {
+    width: 100%;
+    background: #000;
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+    display: none;
+    color: white;
+}
+
+.user-box td {
+    padding: .5rem .3rem;
+}
+
+.user-box a {
+    color: white;
+}
+
+.user-box #cikis {
+    color: var(--yellow);
+}
+
+.active {
+    display: block;
+}
+
+.active-yellow {
+    background: var(--yellow);
+}
+
+.main .section {
+    margin: 1rem 10rem;
+    background: #000;
+    color: white;
+    padding: 1rem;
+}
+
+.bakiye {
+    background: var(--yellow);
+    color: #000;
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#yellowbtn:hover {
+    background: var(--yellow-hover);
+    transition-duration: 300ms;
+}
+
+@media screen and (min-width: 1024px) {
+    .header .user-container {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .main .section {
+        margin: 1rem;
+    }
+
+    .bolumler {
+        gap: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main .section {
+        margin: 1rem;
+    }
+
+    .bolumler {
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+    }
+
+    .bolumler .section {
+        margin: .5rem 1rem;
+        width: auto;
+    }
+
+    .header .links {
+        gap: .5rem;
+    }
+
+    .header .links a {
+        font-size: .6rem;
+    }
+
+    .header .link a i {
+        font-size: 1rem;
+    }
+
+    .bakiye {
+        display: none;
+    }
+
+    .user-container {
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .header .links {
+        display: none;
+    }
+
+    .header .logo {
+        flex: 1;
+    }
+}

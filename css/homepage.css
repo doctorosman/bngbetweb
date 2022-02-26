@@ -1,3 +1,13 @@
+button#iptal {
+    background: var(--red);
+    color: #fff;
+}
+
+button#iptal:hover {
+    background: var(--red-hover);
+    transition-duration: 300ms;
+}
+
 .header {
     background: #000;
     display: flex;
@@ -50,11 +60,6 @@
 
 .main {
     position: relative;
-}
-
-button#iptal {
-    background: var(--red);
-    color: #fff;
 }
 
 .user-box {
@@ -128,7 +133,7 @@ button#iptal {
     justify-content: center;
 }
 
-.maclar-table h3 button:hover {
+.maclar-table h3 button:hover, .tamamla button:enabled:hover, .bakiye:hover {
     background: var(--yellow-hover);
     transition-duration: 300ms;
 }
@@ -344,9 +349,13 @@ button#iptal {
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
-    /* TODO */
     .main .section {
-        margin: 1rem 3rem;
+        margin: 1rem;
+    }
+
+    .bolumler {
+        gap: 0;
+        margin: 0;
     }
 }
 
@@ -386,8 +395,7 @@ button#iptal {
         display: block;
     }
 }
-
-@media (max-width: 465px) {
+@media (max-width: 768px) {
     .logo {
         font-size: 2rem;
     }
