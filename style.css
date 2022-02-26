@@ -15,6 +15,7 @@ input[type=number] {
     --bg: rgb(61, 64, 67);
     --yellow-hover: rgb(211, 193, 61);
     --yellow: rgb(253, 233, 78);
+    --red: rgb(150, 0, 0);
 }
 
 * {
@@ -60,6 +61,10 @@ body {
 
 .logo span {
     color: var(--yellow);
+}
+
+.header a {
+    color: white;
 }
 
 .form-group, .sub-group {

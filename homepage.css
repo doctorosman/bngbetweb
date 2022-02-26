@@ -2,18 +2,47 @@
     background: #000;
     display: flex;
     color: white;
+    align-items: center;
 }
 
 .logo {
-    flex: 1;
     margin: 0 0 0 1rem;
     font-size: 3rem;
+}
+
+.header .links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header .links a {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .9rem;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.header .links a:hover {
+    background: var(--yellow);
+    color: #000;
+    transition-duration: 300ms;
+}
+
+.header .links a i {
+    font-size: 1.6rem;
 }
 
 .header .user {
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-right: 1rem;
     gap: .3rem;
     cursor: pointer;
@@ -23,19 +52,22 @@
     position: relative;
 }
 
+button#iptal {
+    background: var(--red);
+    color: #fff;
+}
+
 .user-box {
-    position: absolute;
-    width: 8rem;
-    right: 0;
-    top: -1rem;
+    width: 100%;
     background: #000;
     padding: .5rem 1rem;
     font-size: 1.1rem;
     display: none;
+    color: white;
 }
 
-.user-box li {
-    margin: .5rem 0;
+.user-box td {
+    padding: .5rem .3rem;
 }
 
 .user-box a {
@@ -92,6 +124,8 @@
     border-radius: .5rem;
     font-weight: bold;
     cursor: pointer;
+    width: 9.5rem;
+    justify-content: center;
 }
 
 .maclar-table h3 button:hover {
@@ -103,6 +137,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .maclar-table .see-more i {
@@ -161,12 +196,19 @@
 }
 
 .mac-row .buttons button {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background: rgb(38, 38, 38);
     margin: 0;
     color: white;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.mac-row .buttons button i {
+    font-size: .7rem;
+    color: var(--yellow);
+    font-weight: normal;
 }
 
 .kazanan {
@@ -253,6 +295,54 @@
     text-align: center;
 }
 
+.mac-row button.selected {
+    background: var(--yellow);
+    color: #000;
+}
+
+.mac-row button.selected > i {
+    color: #000;
+}
+
+.bakiye {
+    background: var(--yellow);
+    color: #000;
+    padding: .5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.tamamla {
+    padding-bottom: 1rem;
+}
+
+.tamamla button {
+    width: 100%;
+    padding: .5rem 1rem;
+    background: var(--yellow);
+    font-size: 1rem;
+    display: flex;
+    gap: .4rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.tamamla button:disabled {
+    background: #ddd;
+    cursor:not-allowed;
+}
+
+@media screen and (min-width: 1024px) {
+    .header .user-container {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) and (min-width: 769px) {
     /* TODO */
     .main .section {
@@ -274,6 +364,26 @@
     .bolumler .section {
         margin: .5rem 1rem;
         width: auto;
+    }
+
+    .header .links {
+        gap: .5rem;
+    }
+
+    .header .links a {
+        font-size: .6rem;
+    }
+
+    .header .link a i {
+        font-size: 1rem;
+    }
+
+    .bakiye {
+        display: none;
+    }
+
+    .user-container {
+        display: block;
     }
 }
 
@@ -301,6 +411,15 @@
 
     .maclar-table h3 button {
         font-size: .8rem;
+        width: 5rem;
+    }
+
+    .header .links {
+        display: none;
+    }
+
+    .header .logo {
+        flex: 1;
     }
 }
 

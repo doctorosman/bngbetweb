@@ -11,34 +11,62 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo"><span>BNG</span>BET</div>
-        <div class="user">
-            @artunc <i class="fas fa-angle-down user-btn"></i>
+        <a href="#"><div class="logo"><span>BNG</span>BET</div></a>
+        <div class="links">
+            <a href=""><i class="fas fa-ticket"></i>Kuponlarım</a>
+            <a href=""><i class="fas fa-money-bill"></i>Geçmiş Ödemeler</a>
+            <a href=""><i class="fas fa-coins"></i>Bakiye Yükle</a>
+            <a href=""><i class="fas fa-user"></i>Profilim</a>
+        </div>
+        <div class="bakiye">
+            <i class="fas fa-wallet"></i> 5,00 ₺
+        </div>
+        <div class="user-container">
+            <div class="user">
+                <i class="fas fa-user"></i>
+            </div>
         </div>
     </div>
     <div class="main">
         <div class="user-box">
-            <ul>
-                <li><a href="#">Profil</a></li>
-                <li><a href="#">Kuponlarım</a></li>
-                <li><a href="#" id="cikis">Çıkış Yap</a></li>
-            </ul>
+            <table>
+                <tr>
+                    <td><i class="fas fa-ticket"></i></td>
+                    <td><a href="#">Kuponlarım</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-money-bill"></i></td>
+                    <td><a href="#">Geçmiş Ödemeler</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-coins"></i></td>
+                    <td><a href="#">Bakiye Yükle</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-user-pen"></i></td>
+                    <td><a href="#">Profili Düzenle</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-arrow-right-from-bracket" id="cikis"></i></td>
+                    <td><a href="#" id="cikis">Çıkış Yap</a></td>
+                </tr>
+            </table>
         </div>
         <div class="maclar section">
             <h1>Haftanın Maçları</h1>
             <div class="maclar-table" id="stsl">
-                <h3><img src="img/superlig.png"><span>Süper Lig</span><button><i class="fas fa-plus"></i>KUPON YAP</button></h3>
+                <h3><img src="img/superlig.png"><span>Süper Lig</span><button id="kuponyap"><i class="fas fa-plus"></i>KUPON YAP</button><button id="iptal"><i class="fas fa-xmark"></i>İPTAL ET</button></h3>
                 <div class="mac-row">
                     <div class="mac-tarih">Pazartesi (22.00)</div>
                     <div class="mac-takimlar">
-                        <span class="mac-takim"><div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000154_120x120.png"></div>Trabzonspor</span>
+                        <span class="mac-takim"><div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000154_120x120.png"></div>Trabzonspor<div>1</div></span>
                         <span class="mac-sonuc">-</span>
-                        <span class="mac-takim">Kayserispor<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000050_120x120.png"></div></span>
+                        <span class="mac-takim"><div>2</div>Kayserispor<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000050_120x120.png"></div></span>
                     </div>
                     <div class="buttons">
-                        <button>1</button>
-                        <button>0</button>
-                        <button>2</button>
+                        <button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                     </div>
                 </div>
                 <div class="mac-row">
@@ -49,9 +77,9 @@
                         <span class="mac-takim">Kasımpaşa<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000038_120x120.png"></div></span>
                     </div>
                     <div class="buttons">
-                        <button>1</button>
-                        <button>0</button>
-                        <button>2</button>
+                        <button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                     </div>
                 </div>
                 <div class="mac-row">
@@ -62,9 +90,9 @@
                         <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                     </div>
                     <div class="buttons">
-                        <button>1</button>
-                        <button>0</button>
-                        <button>2</button>
+                        <button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                     </div>
                 </div>
                 <div class="more">
@@ -75,10 +103,9 @@
                             <span class="mac-sonuc">-</span>
                             <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                         </div>
-                        <div class="buttons">
-                            <button>1</button>
-                            <button>0</button>
-                            <button>2</button>
+                        <div class="buttons"><button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                         </div>
                     </div>
                     <div class="mac-row">
@@ -88,10 +115,9 @@
                             <span class="mac-sonuc">-</span>
                             <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                         </div>
-                        <div class="buttons">
-                            <button>1</button>
-                            <button>0</button>
-                            <button>2</button>
+                        <div class="buttons"><button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                         </div>
                     </div>
                     <div class="mac-row">
@@ -101,11 +127,13 @@
                             <span class="mac-sonuc">-</span>
                             <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                         </div>
-                        <div class="buttons">
-                            <button>1</button>
-                            <button>0</button>
-                            <button>2</button>
+                        <div class="buttons"><button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                         </div>
+                    </div>
+                    <div class="tamamla">
+                        <button id="tamamla" disabled><i class="fas fa-arrow-right"></i>KUPONU TAMAMLA</button>
                     </div>
                 </div>
                 <div class="see-more">
@@ -113,7 +141,7 @@
                 </div>
             </div>
             <div class="maclar-table" id="pl">
-                <h3><img src="img/premier-lig.png"><span>Premier Lig</span><button><i class="fas fa-plus"></i>KUPON YAP</button></h3>
+                <h3><img src="img/premier-lig.png"><span>Premier Lig</span><button id="kuponyap"><i class="fas fa-plus"></i>KUPON YAP</button><button id="iptal"><i class="fas fa-xmark"></i>İPTAL ET</button></h3>
                 <div class="mac-row">
                     <div class="mac-tarih">Pazartesi (22.00)</div>
                     <div class="mac-takimlar">
@@ -122,9 +150,9 @@
                         <span class="mac-takim">Kayserispor<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000050_120x120.png"></div></span>
                     </div>
                     <div class="buttons">
-                        <button>1</button>
-                        <button>0</button>
-                        <button>2</button>
+                        <button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                     </div>
                 </div>
                 <div class="mac-row">
@@ -135,9 +163,9 @@
                         <span class="mac-takim">Kasımpaşa<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000038_120x120.png"></div></span>
                     </div>
                     <div class="buttons">
-                        <button>1</button>
-                        <button>0</button>
-                        <button>2</button>
+                        <button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                     </div>
                 </div>
                 <div class="mac-row">
@@ -148,9 +176,9 @@
                         <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                     </div>
                     <div class="buttons">
-                        <button>1</button>
-                        <button>0</button>
-                        <button>2</button>
+                        <button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                     </div>
                 </div>
                 <div class="more">
@@ -161,10 +189,9 @@
                             <span class="mac-sonuc">-</span>
                             <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                         </div>
-                        <div class="buttons">
-                            <button>1</button>
-                            <button>0</button>
-                            <button>2</button>
+                        <div class="buttons"><button>1<br><i>+1</i></button>
+                        <button>0<br><i>+2</i></button>
+                        <button>2<br><i>+4</i></button>
                         </div>
                     </div>
                     <div class="mac-row">
@@ -175,9 +202,9 @@
                             <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                         </div>
                         <div class="buttons">
-                            <button>1</button>
-                            <button>0</button>
-                            <button>2</button>
+                            <button>1<br><i>+1</i></button>
+                            <button>0<br><i>+2</i></button>
+                            <button>2<br><i>+4</i></button>
                         </div>
                     </div>
                     <div class="mac-row">
@@ -188,10 +215,13 @@
                             <span class="mac-takim">Beşiktaş<div class="takimlogo"><img src="https://fys.tff.org/TFFUploadFolder/KulupLogolari/000148_120x120.png"></div></span>
                         </div>
                         <div class="buttons">
-                            <button>1</button>
-                            <button>0</button>
-                            <button>2</button>
+                            <button>1<br><i>+1</i></button>
+                            <button>0<br><i>+2</i></button>
+                            <button>2<br><i>+4</i></button>
                         </div>
+                    </div>
+                    <div class="tamamla">
+                        <button id="tamamla" disabled><i class="fas fa-arrow-right"></i>KUPONU TAMAMLA</button>
                     </div>
                 </div>
                 <div class="see-more">
