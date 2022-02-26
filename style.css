@@ -13,6 +13,7 @@ input[type=number] {
 :root {
     --black: rgb(47, 47, 48);
     --bg: rgb(61, 64, 67);
+    --yellow-hover: rgb(211, 193, 61);
     --yellow: rgb(253, 233, 78);
 }
 

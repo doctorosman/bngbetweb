@@ -70,16 +70,59 @@
     align-items: center;
     gap: .5rem;
     font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.maclar-table h3 span {
+    flex: 1;
 }
 
 .maclar-table h3 img {
     max-height: 2rem;
 }
 
+.maclar-table h3 button {
+    padding: .5rem 1rem;
+    background: var(--yellow);
+    font-size: 1rem;
+    display: flex;
+    gap: .4rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.maclar-table h3 button:hover {
+    background: var(--yellow-hover);
+    transition-duration: 300ms;
+}
+
+.maclar-table .see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maclar-table .see-more i {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.maclar-table .more {
+    display: none;
+
+}
+
+.maclar-table .more.active {
+    display: block;
+}
+
 .mac-row {
     display: flex;
     align-items: center;
-    margin: .5rem;
+    margin: 1rem;
 }
 
 .mac-row .mac-tarih {
@@ -210,6 +253,13 @@
     text-align: center;
 }
 
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* TODO */
+    .main .section {
+        margin: 1rem 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .main .section {
         margin: 1rem;
@@ -238,7 +288,7 @@
         font-size: 1rem;
     }
     .mac-row {
-        font-size: .8rem;
+        font-size: .9rem;
         flex-direction: column;
         gap: 1rem;
         margin: 2rem 0;
@@ -246,12 +296,27 @@
 
     .mac-row .mac-takimlar .mac-takim {
         width: 8rem;
-        gap: 1rem;
+        gap: .6rem;
+    }
+
+    .maclar-table h3 button {
+        font-size: .8rem;
     }
 }
 
 @media (max-width: 375px) {    
     .mac-row .mac-takimlar .mac-takim {
         width: 7rem;
+    }
+
+    .maclar-table h3 button {
+        font-size: .7rem;
+        padding: .5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .maclar-table h3 button {
+        font-size: .6rem;
     }
 }
