@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNGBET</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0c2ddf73cd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="#"><div class="logo"><span>BNG</span>BET</div></a>
+        <div class="links">
+            <a href="../kuponlarim/index.html"><i class="fas fa-ticket"></i>Kuponlarım</a>
+            <a href="../gecmisodemeler/index.html"><i class="fas fa-money-bill"></i>Geçmiş Ödemeler</a>
+            <a href="#" class="here"><i class="fas fa-coins"></i>Bakiye Yükle</a>
+            <a href="../profil/index.html"><i class="fas fa-user"></i>Profilim</a>
+        </div>
+        <div class="bakiye" id="yellowbtn">
+            <i class="fas fa-wallet"></i> 5,00 ₺
+        </div>
+        <div class="user-container">
+            <div class="user">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="user-box">
+            <table>
+                <tr>
+                    <td><i class="fas fa-ticket"></i></td>
+                    <td><a href="../kuponlarim/index.html">Kuponlarım</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-money-bill"></i></td>
+                    <td><a href="../gecmisodemeler/index.html">Geçmiş Ödemeler</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-coins"></i></td>
+                    <td><a href="#">Bakiye Yükle</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-user-pen"></i></td>
+                    <td><a href="../profil/index.html">Profili Düzenle</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-arrow-right-from-bracket" id="cikis"></i></td>
+                    <td><a href="#" id="cikis">Çıkış Yap</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="main">
+        <div class="section">
+            <div class="mevcut-bakiye">
+                <h4>Mevcut Bakiyeniz</h4>
+                <h1>5,00 ₺</h1>
+            </div>
+            <h1>Bakiye Yükle</h1>
+            <form action="#">
+                <div class="tutar">
+                    <input type="number" id="tutar"> ,00 ₺
+                </div>
+                <div class="odeme-yontemi">
+                    <button id="papara"><img src="../img/papara-ile-ode.png"></button>
+                    <button id="elden"><i class="fas fa-hand-holding-dollar"></i>Elden Öde</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

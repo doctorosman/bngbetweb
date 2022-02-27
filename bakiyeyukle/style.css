@@ -108,46 +108,75 @@
     color: #000;
 }
 
-.section table {
-    word-wrap: break-word;
-    margin: 1.5rem .5rem;
-}
-.section table tr td#tarih {
-    width: 5%;
+.mevcut-bakiye {
+    text-align: center;
 }
 
-.section table thead td{
-    font-weight: bold;
-    background: var(--table-head);
-}
-
-.section table a {
-    color: white;
-    font-weight: 700;
-}
-
-.section table a:hover {
+.mevcut-bakiye h1 {
     color: var(--yellow);
 }
 
-.section table td {
-    padding: .8rem 1rem;
+.tutar {
+    font-size: 1.5rem;
 }
 
-.section table tr:nth-child(even) {
-    background: var(--table-secondary);
+.tutar input {
+    font-size: 1.5rem;
+    width: 3.8rem;
+    padding: .3rem .5rem;
 }
 
-.section table tr:nth-child(odd) {
-    background: var(--table-primary);
+.section h1 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.odeme-yontemi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.odeme-yontemi button {
+    width: 10rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.odeme-yontemi button#papara {
+    display: flex;
+    justify-content: center;
+}
+
+.odeme-yontemi button#elden {
+    background: var(--yellow);
+    height: 2.5rem;
+    border-radius: .2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.odeme-yontemi button#elden i {
+    font-size: 1.5rem;
+}
+
+.odeme-yontemi button img {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
     .header .user-container {
-        display: none;
-    }
-
-    .mobile {
         display: none;
     }
 }
@@ -161,24 +190,9 @@
         gap: 0;
         margin: 0;
     }
-    
-    .mobile {
-        display: none;
-    }
-
-    .main .section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 @media (max-width: 768px) {
-    .web {
-        display: none;
-    }
-
     .main .section {
         margin: 1rem;
     }
@@ -218,17 +232,11 @@
         display: block;
     }
 
-    .main .section .tables {
-        display: flex;
+    .odeme-yontemi {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
-
-    .main .section .tables table {
-        width: 100%;
-    }
-
+}
+@media (max-width: 768px) {
     .logo {
         font-size: 2rem;
     }
