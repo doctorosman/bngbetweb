@@ -342,10 +342,19 @@ button#iptal:hover {
     cursor:not-allowed;
 }
 
+.skor {
+    font-weight: bold;
+}
+
 @media screen and (min-width: 1024px) {
     .header .user-container {
         display: none;
     }
+
+    .buttons .skor{
+        display: none;
+    }
+
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -360,6 +369,23 @@ button#iptal:hover {
 }
 
 @media (max-width: 768px) {
+    
+    .buttons .skor.active{
+        display: block;
+    }
+    
+    .buttons .skor{
+        display: none;
+    }
+    
+    .buttons .ms-buttons.inactive{
+        display: none;
+    }
+
+    .mac-takim .takim-skor{
+        display: none;
+    }
+
     .main .section {
         margin: 1rem;
     }
@@ -389,6 +415,10 @@ button#iptal:hover {
 
     .bakiye {
         display: none;
+    }
+
+    .header{
+        justify-content: space-between;
     }
 
     .user-container {

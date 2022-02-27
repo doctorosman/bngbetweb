@@ -108,66 +108,8 @@
     color: #000;
 }
 
-.section table {
-    word-wrap: break-word;
-    margin: 1.5rem .5rem;
-}
-.section table tr td#kuponkodu {
-    width: 5%;
-}
-
-.section table thead td{
-    font-weight: bold;
-    background: var(--table-head);
-}
-
-.section table a {
-    color: white;
-    font-weight: 700;
-}
-
-.section table a:hover {
-    color: var(--yellow);
-}
-
-.section table td {
-    padding: .8rem 1rem;
-}
-
-.section table tr:nth-child(even) {
-    background: var(--table-secondary);
-}
-
-.section table tr:nth-child(odd) {
-    background: var(--table-primary);
-}
-
-.section table img {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-}
-
-.section table tr td#onaybekliyor {
-    color: green;
-    font-weight: bold;
-}
-
-.section table tr td#onaylandi, .section table tr td#kazandi {
-    color: var(--yellow);
-    font-weight: bold;
-}
-
-.section table tr td#kazanamadi {
-    color: red;
-    font-weight: bold;
-}
-
 @media screen and (min-width: 1024px) {
     .header .user-container {
-        display: none;
-    }
-
-    .mobile {
         display: none;
     }
 }
@@ -181,25 +123,9 @@
         gap: 0;
         margin: 0;
     }
-
-    .mobile {display: none;}
 }
 
 @media (max-width: 768px) {
-    .web {
-        display: none;
-    }
-
-    table.mobile tr td:first-child {
-        font-weight: 700;
-    }
-
-    table.mobile tr td#lig {
-        display: flex;
-        align-items: center;
-        gap: .3rem;
-    }
-
     .main .section {
         margin: 1rem;
     }

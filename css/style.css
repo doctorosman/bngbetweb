@@ -17,6 +17,9 @@ input[type=number] {
     --yellow: rgb(253, 233, 78);
     --red: rgb(150, 0, 0);
     --red-hover: rgb(120, 0, 0);
+    --table-head: rgb(34, 40, 49);
+    --table-primary: rgb(46, 56, 67);
+    --table-secondary: rgb(38, 46, 55);
 }
 
 * {
