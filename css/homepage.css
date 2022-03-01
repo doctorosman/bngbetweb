@@ -346,12 +346,229 @@ button#iptal:hover {
     font-weight: bold;
 }
 
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: -105%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container.active {
+    left: 0;
+}
+
+.popup-container .popup {
+    background: black;
+    color: white;
+    width: 50rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.kuponu-tamamla-popup .table-container {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kuponu-tamamla-popup .table-container .maclar {
+    display: inline;
+}
+
+.popup-container .popup .exit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.kuponu-tamamla-popup table img {
+    max-height: 1.5rem;
+}
+
+.kuponu-tamamla-popup table.kupon-table thead td{
+    font-weight: bold;
+    background: var(--table-head);
+}
+
+.kuponu-tamamla-popup table.kupon-table a {
+    color: white;
+    font-weight: 700;
+}
+
+.kuponu-tamamla-popup table.kupon-table a:hover {
+    color: var(--yellow);
+}
+
+.kuponu-tamamla-popup table.kupon-table td {
+    padding: .5rem 1rem;
+}
+
+.kuponu-tamamla-popup table.kupon-table tr:nth-child(even) {
+    background: var(--table-secondary);
+}
+
+.kuponu-tamamla-popup table.kupon-table tr:nth-child(odd) {
+    background: var(--table-primary);
+}
+
+.kuponu-tamamla-popup table.maclar {
+    border-collapse: collapse;
+}
+
+.kuponu-tamamla-popup table.maclar tr {
+    border: .1rem solid black;
+}
+
+.kuponu-tamamla-popup table.maclar tr td {
+    background: var(--table-secondary);
+}
+
+.kuponu-tamamla-popup table.kupon-table td#oynanan-lig {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+span#lig-hafta {
+    font-size: 1.3rem;
+    color: var(--yellow);
+}
+
+.odeme-yontemi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.odeme-yontemi button {
+    width: 10rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.odeme-yontemi button#papara {
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.odeme-yontemi button#elden {
+    background: var(--yellow);
+    height: 2.5rem;
+    border-radius: .2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.odeme-yontemi button#elden i {
+    font-size: 1.5rem;
+}
+
+.odeme-yontemi button img {
+    width: 100%;
+}
+
+.odeme-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.odeme-papara .odeme-popup .img {
+    padding: .5rem 0;
+}
+
+.odeme-papara .odeme-popup img {
+    max-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.odeme-popup .aciklama {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.odeme-popup button {
+    padding: .5rem 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.odeme-popup .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+}
+
+.odeme-popup button#odeme-onayla {
+    background: var(--yellow);
+    color: #000;
+}
+
+.odeme-popup button#odeme-onayla:hover {
+    background: var(--yellow-hover);
+}
+
+.odeme-popup button#iptal-et {
+    background: var(--red);
+    color: white;
+}
+
+.odeme-popup button#iptal-et:hover {
+    background: var(--red-hover);
+}
+
+.odeme-popup .paparano, .odeme-popup .gtutar {
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.odeme-popup h2 {
+    margin: 1rem 0;
+}
+
+.odeme-popup .gtutar {
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+.odeme-elden .gtutar, .odeme-cuzdan .gtutar {
+    padding-top: 1rem;
+}
+
 @media screen and (min-width: 1024px) {
     .header .user-container {
         display: none;
     }
 
     .buttons .skor{
+        display: none;
+    }
+
+    table.mobile {
         display: none;
     }
 
@@ -366,9 +583,22 @@ button#iptal:hover {
         gap: 0;
         margin: 0;
     }
+    table.mobile {
+        display: none;
+    }
+    .header .user-container {
+        display: none;
+    }
+
+    .buttons .skor{
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
+    table.web {
+        display: none;
+    }
     
     .buttons .skor.active{
         display: block;
@@ -407,14 +637,21 @@ button#iptal:hover {
 
     .header .links a {
         font-size: .6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .header .link a i {
         font-size: 1rem;
     }
 
-    .bakiye {
+    .header .bakiye {
         display: none;
+    }
+
+    .user-box .bakiye {
+        width: fit-content;
     }
 
     .header{
@@ -424,8 +661,7 @@ button#iptal:hover {
     .user-container {
         display: block;
     }
-}
-@media (max-width: 768px) {
+    
     .logo {
         font-size: 2rem;
     }
@@ -447,6 +683,10 @@ button#iptal:hover {
         gap: .6rem;
     }
 
+    .odeme-yontemi {
+        flex-direction: column;
+    }
+
     .maclar-table h3 button {
         font-size: .8rem;
         width: 5rem;
@@ -458,6 +698,28 @@ button#iptal:hover {
 
     .header .logo {
         flex: 1;
+    }
+    
+    .kuponu-tamamla-popup {
+        width: 39rem;
+    }
+}
+
+@media (max-width: 465px) {
+    .odeme-popup button{
+        font-size: .8rem;
+    }
+
+    .kuponu-tamamla-popup {
+        width: 19rem;
+    }
+
+    span#lig-hafta {
+        font-size: .8rem;
+    }
+
+    .kuponu-tamamla-popup table table {
+        font-size: .8rem;
     }
 }
 

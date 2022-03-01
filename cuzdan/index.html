@@ -16,7 +16,7 @@
         <div class="links">
             <a href="../kuponlarim/index.html"><i class="fas fa-ticket"></i>Kuponlarım</a>
             <a href="../gecmisodemeler/index.html"><i class="fas fa-money-bill"></i>Geçmiş Ödemeler</a>
-            <a href="#" class="here"><i class="fas fa-coins"></i>Bakiye Yükle</a>
+            <a href="../bakiyeyukle/index.html"><i class="fas fa-coins"></i>Bakiye Yükle</a>
             <a href="../profil/index.html"><i class="fas fa-user"></i>Profilim</a>
         </div>
         <a href="../cuzdan/index.html">
@@ -67,14 +67,14 @@
                 <h4>Mevcut Bakiyeniz</h4>
                 <h1>5,00 ₺</h1>
             </div>
-            <h1>Bakiye Yükle</h1>
+            <h1>Çekim Talebi Oluştur</h1>
             <form action="#">
                 <div class="tutar">
                     <input type="number" id="tutar"> ,00 ₺
                 </div>
                 <div class="odeme-yontemi">
-                    <button id="papara"><img src="../img/papara-ile-ode.png"></button>
-                    <button id="elden"><i class="fas fa-hand-holding-dollar"></i>Elden Öde</button>
+                    <button id="papara"><img src="../img/papara-ile-cek.png"></button>
+                    <button id="elden"><i class="fas fa-hand-holding-dollar"></i>Elden Çek</button>
                 </div>
             </form>
             <div class="bekleyen-islemler">
@@ -82,6 +82,7 @@
                 <table cellspacing="0" class="web">
                     <tr>
                         <td>#</td>
+                        <td>İşlem</td>
                         <td id="kuponkodu">Tarih</td>
                         <td>Ödeme Yöntemi</td>
                         <td>Tutar</td>
@@ -89,6 +90,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
+                        <td>Çekim Talebi</td>
                         <td>22.02.2022</td>
                         <td>Papara</td>
                         <td>5,00 ₺</td>
@@ -96,6 +98,10 @@
                     </tr>
                 </table>
                 <table cellspacing="0" class="mobile">
+                    <tr>
+                        <td>İşlem</td>
+                        <td>Çekim Talebi</td>
+                    </tr>
                     <tr>
                         <td>Tarih</td>
                         <td>22.02.2022</td>
@@ -114,17 +120,73 @@
                     </tr>
                 </table>
             </div>
+            <div class="oduller">
+                <h2>Ödüller</h2>
+                <table cellspacing="0" class="web">
+                    <thead>
+                        <td>#</td>
+                        <td id="kuponkodu">Kupon Kodu</td>
+                        <td colspan="2">Lig</td>
+                        <td>Hafta</td>
+                        <td>Tarih</td>
+                        <td>Durum</td>
+                        <td>Ödül</td>
+                        <td>Kupon</td>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>100001</td>
+                        <td><img src="../img/superlig.png"></td>
+                        <td>Süper Lig</td>
+                        <td>21. Hafta</td>
+                        <td>20.04.2020</td>
+                        <td id="kazandi">Ödül Yüklendi</td>
+                        <td>5,00 ₺</td>
+                        <td><a href="#">Kuponu Görüntüle</a></td>
+                    </tr>
+                </table>
+                <table cellspacing="0" class="mobile">
+                    <tr>
+                        <td>Kupon Kodu</td>
+                        <td>100001</td>
+                    </tr>
+                    <tr>
+                        <td>Lig</td>
+                        <td id="lig"><img src="../img/superlig.png">Süper Lig</td>
+                    </tr>
+                    <tr>
+                        <td>Hafta</td>
+                        <td>21. Hafta</td>
+                    </tr>
+                    <tr>
+                        <td>Tarih</td>
+                        <td>20.04.2020</td>
+                    </tr>
+                    <tr>
+                        <td>Durum</td>
+                        <td id="kazandi">Ödül Yüklendi</td>
+                    </tr>
+                    <tr>
+                        <td>Ödül</td>
+                        <td>5,00 ₺</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="#">Kuponu Görüntüle</a></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <div class="odeme-popup-container odeme-papara">
         <div class="odeme-popup">
             <i class="fas fa-xmark exit"></i>
-            <img src="../img/papara-ile-ode.png"><br>
-            Yüklemek istediğiniz tutarı aşağıdaki papara hesabına gönderin. Gönderim aşamasında açıklama kısmına kullanıcı adınızı yazmayı unutmayın. Aksi takdirde talebiniz onaylanmayabilir. Para hesabımıza geçtikten sonra ödemeniz onaylanacak, bakiyeniz yüklenecektir.
+            <img src="../img/papara-ile-cek.png"><br>
+            Çekmek istediğiniz tutarı onaylayın. Çekim talebiniz onaylandıktan sonra paranız aşağıdaki papara hesabınıza yatırılacaktır.
             <div>Papara Numarası: <span>908822323</span></div>
-            <div class="gtutar">Gönderilecek Tutar: <span>5,00 ₺</span></div>
+            <div class="gtutar">Çekilecek Tutar: <span>5,00 ₺</span></div>
             <div class="buttons">
-                <button id="odeme-onayla"><i class="fas fa-check"></i>Ödemeyi Onayla</button>
+                <button id="odeme-onayla"><i class="fas fa-check"></i>Çekim Talebini Gönder</button>
                 <button id="iptal-et"><i class="fas fa-xmark"></i>İptal Et</button>
             </div>
         </div>
@@ -132,9 +194,9 @@
     <div class="odeme-popup-container odeme-elden">
         <div class="odeme-popup">
             <i class="fas fa-xmark exit"></i>
-            <h2>Elden Öde</h2>
-            Yüklemek istediğiniz tutarı onaylayın. Yetkililerimize elden ödeme yaptıktan sonra bakiyeniz yüklenecektir.
-            <div class="ytutar">Yüklenecek Tutar: <span>5,00 ₺</span></div>
+            <h2>Elden Çek</h2>
+            Çekmek istediğiniz tutarı onaylayın. Çekim talebiniz onaylandıktan sonra paranız yetkililerimizce tarafınıza elden ulaştırılacaktır.
+            <div class="ytutar">Çekilecek Tutar: <span>5,00 ₺</span></div>
             <div class="buttons">
                 <button id="odeme-onayla"><i class="fas fa-check"></i>Ödemeyi Onayla</button>
                 <button id="iptal-et"><i class="fas fa-xmark"></i>İptal Et</button>

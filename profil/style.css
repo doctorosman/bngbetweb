@@ -61,10 +61,6 @@
     color: white;
 }
 
-.user-box.active {
-    display: block;
-}
-
 .user-box td {
     padding: .5rem .3rem;
 }
@@ -75,6 +71,10 @@
 
 .user-box #cikis {
     color: var(--yellow);
+}
+
+.active {
+    display: block;
 }
 
 .active-yellow {
@@ -108,82 +108,144 @@
     color: #000;
 }
 
-.section table {
-    table-layout: fixed;
-    word-wrap: break-word;
-    margin: 1.5rem .5rem;
-}
-.section table tr td#kuponkodu {
-    width: 5%;
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.section table thead td{
+.info i {
+    font-size: 1.5rem;
+}
+
+.info .isim {
+    font-size: 1.5rem;
     font-weight: bold;
-    background: var(--table-head);
 }
 
-.section table a {
-    color: white;
-    font-weight: 700;
-}
-
-.section table a:hover {
+.info .kadi {
+    font-size: 1.1rem;
     color: var(--yellow);
 }
 
-.section table td {
-    padding: .8rem 1rem;
-}
-
-.section table tr:nth-child(even) {
-    background: var(--table-secondary);
-}
-
-.section table tr:nth-child(odd) {
-    background: var(--table-primary);
-}
-
-.section table img {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-}
-
-.section table tr td#onaybekliyor {
-    color: green;
+.stats {
+    font-size: 1.1rem;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
     font-weight: bold;
 }
 
-.section table tr td#onaylandi, .section table tr td#kazandi {
+.stats span {
+    font-size: 1.3rem;
     color: var(--yellow);
-    font-weight: bold;
 }
 
-.section table tr td#kazanamadi {
-    color: red;
-    font-weight: bold;
+.stats div {
+    padding: 1rem 0;
+    border: .1rem solid white;
+    gap: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
 }
 
-.see-more {
+.duzenle, .sifre {
+    width: 13rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    height: 3rem;
 }
 
-.see-more span {
+.sifre {
+    background: var(--red);
+    color: white;
+}
+
+.sifre:hover {
+    background: var(--red-hover);
+    transition-duration: 300ms;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: -105%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container.active {
+    left: 0;
+}
+
+.popup {
+    background: black;
+    color: white;
+    width: 50rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.popup-profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup-profil form, .popup-sifre form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup-profil form input, .popup-sifre form input{
+    height: 2rem;
+    width: 50%;
+    padding: .5rem .7rem;
+    background: white;
+    margin: .5rem 0;
+    font-size: 1rem;
+}
+
+.popup-profil button, .popup-sifre button {
+    background: var(--yellow);
+    color: #000;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.exit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
     .header .user-container {
-        display: none;
-    }
-
-    .mobile {
-        display: none;
-    }
-
-    .see-more {
         display: none;
     }
 }
@@ -197,34 +259,9 @@
         gap: 0;
         margin: 0;
     }
-    
-    .mobile {
-        display: none;
-    }
-
-    .main .section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 @media (max-width: 768px) {
-    .web {
-        display: none;
-    }
-
-    table.mobile tr td:first-child {
-        font-weight: 700;
-    }
-
-    table.mobile tr td#lig {
-        display: flex;
-        align-items: center;
-        gap: .3rem;
-    }
-
     .main .section {
         margin: 1rem;
     }
@@ -252,6 +289,10 @@
         font-size: 1rem;
     }
 
+    .bakiye.gercek-bakiye {
+        display: none;
+    }
+
     .header .bakiye {
         display: none;
     }
@@ -264,21 +305,10 @@
         justify-content: space-between;
     }
 
-    .see-more {
-        margin: 2rem 0;
-        font-weight: 700;
-    }
-
     .user-container {
         display: block;
     }
 
-    .main .section .tables {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     .logo {
         font-size: 2rem;
     }
@@ -291,11 +321,24 @@
         flex: 1;
     }
 
-    .more {
-        display: none;
+    .stats {
+        flex-direction: column;
     }
 
-    .more.active {
-        display: block;
+    .stats div {
+        width: 15rem;
+    }
+    
+    .popup {
+        width: 19rem;
+    }
+
+    .popup-profil form input, .popup-sifre form input {
+        width: 100%;
+        margin: .5rem 0;
+    }
+
+    .popup-profil form input:nth-child(1), .popup-sifre form input:nth-child(1) {
+        margin-top: 1.5rem;
     }
 }

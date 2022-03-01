@@ -61,6 +61,10 @@
     color: white;
 }
 
+.user-box.active {
+    display: block;
+}
+
 .user-box td {
     padding: .5rem .3rem;
 }
@@ -71,10 +75,6 @@
 
 .user-box #cikis {
     color: var(--yellow);
-}
-
-.active {
-    display: block;
 }
 
 .active-yellow {
@@ -207,8 +207,12 @@
         font-size: 1rem;
     }
 
-    .bakiye {
+    .header .bakiye {
         display: none;
+    }
+
+    .user-box .bakiye {
+        width: fit-content;
     }
 
     .header{

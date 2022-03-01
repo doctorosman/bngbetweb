@@ -61,10 +61,6 @@
     color: white;
 }
 
-.user-box.active {
-    display: block;
-}
-
 .user-box td {
     padding: .5rem .3rem;
 }
@@ -108,82 +104,167 @@
     color: #000;
 }
 
-.section table {
-    table-layout: fixed;
-    word-wrap: break-word;
-    margin: 1.5rem .5rem;
-}
-.section table tr td#kuponkodu {
-    width: 5%;
+.mevcut-bakiye {
+    text-align: center;
 }
 
-.section table thead td{
-    font-weight: bold;
-    background: var(--table-head);
+.mevcut-bakiye h1 {
+    color: var(--yellow);
 }
 
-.section table a {
-    color: white;
+.tutar {
+    font-size: 1.5rem;
+}
+
+.tutar input {
+    font-size: 1.5rem;
+    width: 3.8rem;
+    padding: .3rem .5rem;
+    text-align: right;
+}
+
+.section h1 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.odeme-yontemi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.odeme-yontemi button {
+    width: 10rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.odeme-yontemi button#papara {
+    display: flex;
+    justify-content: center;
+}
+
+.odeme-yontemi button#elden {
+    background: var(--yellow);
+    height: 2.5rem;
+    border-radius: .2rem;
     font-weight: 700;
-}
-
-.section table a:hover {
-    color: var(--yellow);
-}
-
-.section table td {
-    padding: .8rem 1rem;
-}
-
-.section table tr:nth-child(even) {
-    background: var(--table-secondary);
-}
-
-.section table tr:nth-child(odd) {
-    background: var(--table-primary);
-}
-
-.section table img {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-}
-
-.section table tr td#onaybekliyor {
-    color: green;
-    font-weight: bold;
-}
-
-.section table tr td#onaylandi, .section table tr td#kazandi {
-    color: var(--yellow);
-    font-weight: bold;
-}
-
-.section table tr td#kazanamadi {
-    color: red;
-    font-weight: bold;
-}
-
-.see-more {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
 }
 
-.see-more span {
+.odeme-yontemi button#elden i {
+    font-size: 1.5rem;
+}
+
+.odeme-yontemi button img {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.odeme-popup-container {
+    position: fixed;
+    top: 0;
+    left: -105%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.odeme-popup-container.active {
+    left: 0;
+}
+
+.odeme-popup {
+    background: black;
+    color: white;
+    width: 50rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.odeme-popup .exit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.odeme-popup {
+    text-align: center;
+}
+
+.odeme-popup div {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.odeme-popup div span {
+    font-weight: 700;
+}
+
+.odeme-papara .odeme-popup img {
+    max-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.odeme-popup button {
+    padding: .5rem 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.odeme-popup .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+}
+
+.odeme-popup button#odeme-onayla {
+    background: var(--yellow);
+    color: #000;
+}
+
+.odeme-popup button#odeme-onayla:hover {
+    background: var(--yellow-hover);
+}
+
+.odeme-popup button#iptal-et {
+    background: var(--red);
+    color: white;
+}
+
+.odeme-popup button#iptal-et:hover {
+    background: var(--red-hover);
+}
+
+.odeme-elden h2 {
+    margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
     .header .user-container {
-        display: none;
-    }
-
-    .mobile {
-        display: none;
-    }
-
-    .see-more {
         display: none;
     }
 }
@@ -197,32 +278,14 @@
         gap: 0;
         margin: 0;
     }
-    
-    .mobile {
-        display: none;
-    }
-
-    .main .section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 @media (max-width: 768px) {
-    .web {
-        display: none;
-    }
-
-    table.mobile tr td:first-child {
-        font-weight: 700;
-    }
-
-    table.mobile tr td#lig {
+    .bekleyen-islemler, .oduller {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: .3rem;
+        justify-content: center;
     }
 
     .main .section {
@@ -264,21 +327,14 @@
         justify-content: space-between;
     }
 
-    .see-more {
-        margin: 2rem 0;
-        font-weight: 700;
-    }
-
     .user-container {
         display: block;
     }
 
-    .main .section .tables {
-        display: flex;
+    .odeme-yontemi {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
+
     .logo {
         font-size: 2rem;
     }
@@ -291,11 +347,21 @@
         flex: 1;
     }
 
-    .more {
-        display: none;
+    .odeme-popup {
+        width: 39rem;
     }
 
-    .more.active {
+    table.mobile {
         display: block;
+    }
+}
+
+@media (max-width: 425px) {
+    .odeme-popup {
+        width: 19rem;
+    }
+
+    .odeme-popup .buttons {
+        flex-direction: column-reverse;
     }
 }

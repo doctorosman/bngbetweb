@@ -153,8 +153,12 @@
         font-size: 1rem;
     }
 
-    .bakiye {
+    .header .bakiye {
         display: none;
+    }
+
+    .user-box .bakiye {
+        width: fit-content;
     }
 
     .header{

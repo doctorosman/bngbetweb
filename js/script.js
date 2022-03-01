@@ -3,7 +3,86 @@ const user = document.querySelector('.user');
 const userbox = document.querySelector('.user-box');
 const userarrow = document.querySelector('.user-btn');
 
+// CLASSLAR
+let Mac = class {
+    constructor(title, tahmin, puan) {
+        this.title = title;
+        this.tahmin = tahmin;
+        this.puan = puan;
+    }
+}
+
+let Kupon = class {
+    constructor(lig, lig_logo, hafta, maclar) {
+        this.lig = lig;
+        this.lig_logo = lig_logo;
+        this.hafta = hafta;
+        this.maclar = maclar;
+    }
+}
+
 // FONKSİYONLAR
+const ligAdi = (lig_id) => {
+    switch (lig_id) {
+        case 'stsl':
+            return 'Süper Lig';
+        case 'pl':
+            return 'Premier Lig';
+        case 'ucl':
+            return 'Şampiyonlar Ligi';
+        case 'uel':
+            return 'Avrupa Ligi';
+        case 'bl':
+            return 'Bundesliga';
+        case 'l1':
+            return 'Ligue 1';
+        case 'laliga':
+            return 'La Liga';
+    }
+}
+
+const ligLogo = (lig_id) => {
+    switch (lig_id) {
+        case 'stsl':
+            return 'img/superlig.png';
+
+        case 'pl':
+            return 'img/premier-lig.png';
+
+        case 'ucl':
+            return 'img/ucl.png';
+
+        case 'uel':
+            return 'img/uel.png';
+
+        case 'bl':
+            return 'img/bundesliga.png';
+
+        case 'l1':
+            return 'img/ligue-1.png';
+
+        case 'laliga':
+            return 'img/laliga.png';
+    }
+}
+
+const kuponPopup = (kupon, mobile = false) => {
+    const table = '.kuponu-tamamla-popup table.kupon-table' + (mobile ? '.mobile' : '');
+    const lig = document.querySelector(table + ' td#oynanan-lig');
+    const hafta = document.querySelector(table + ' td#hafta');
+    const maclar = document.querySelector(table + ' table.maclar');
+
+    lig.innerHTML = '<img src="' + kupon.lig_logo + '">' + kupon.lig;
+    hafta.innerHTML = kupon.hafta;
+
+    let maclar_table = '';
+    kupon.maclar.forEach((mac) => {
+        maclar_table += '<tr><td>' + mac.title + '</td><td>' + mac.tahmin + '</td><td>' + mac.puan + '</td></tr>';
+    });
+
+    maclar.innerHTML = maclar_table;
+}
+
 const birKuponAktifMi = () => {
     let kuponAktifMi = false;
 
@@ -81,8 +160,44 @@ const clearSelections = (league_id) => {
 }
 
 const showTamamla = (league_id, disabled = false) => {
-    document.querySelector('#' + league_id + ' .tamamla button').style.display = 'flex';
-    document.querySelector('#' + league_id + ' .tamamla button').disabled = disabled;
+    const tamamla = document.querySelector('#' + league_id + ' .tamamla button');
+    tamamla.style.display = 'flex';
+    tamamla.disabled = disabled;
+
+    if (!disabled) {
+        tamamla.onclick = () => {
+            const mtable = tamamla.parentElement.parentElement.parentElement;
+            const hafta = mtable.querySelector('#lig-hafta').innerHTML;
+            let maclar = [];
+            mtable.querySelectorAll('.mac-row').forEach((e) => {
+                if (e != null) {
+                    selected = e.querySelector('button.selected');
+                    const takim1 = e.querySelector('.mac-takimlar .mac-takim:nth-child(1) .takim-adi');
+                    const takim2 = e.querySelector('.mac-takimlar .mac-takim:last-child .takim-adi');
+                    
+                    const title = takim1.innerHTML + ' - ' + takim2.innerHTML;
+                    let tahmin = 'MS ' + selected.innerHTML;
+                    const puan = selected.querySelector('i').innerHTML;
+                    tahmin = tahmin.substring(0, 4);
+                    maclar.push(new Mac(
+                        title,
+                        tahmin,
+                        puan
+                    ));
+                }
+            });
+            const kupon = new Kupon(
+                ligAdi(league_id),
+                ligLogo(league_id),
+                hafta,
+                maclar
+            );
+
+            kuponPopup(kupon);
+            kuponPopup(kupon, true);
+            document.querySelector('.kuponu-tamamla-popup-container').classList.add('active');
+        }
+    }
 }
 
 const hideTamamla = (league_id) => {
@@ -177,3 +292,55 @@ document.querySelectorAll('.maclar-table').forEach((e) => {
         }
     });
 });
+
+document.querySelector('.kuponu-tamamla-popup .exit').onclick = () => {
+    document.querySelector('.kuponu-tamamla-popup-container').classList.remove('active');
+}
+
+const papara_exit = document.querySelector('.odeme-papara .exit');
+const elden_exit = document.querySelector('.odeme-elden .exit');
+const cuzdan_exit = document.querySelector('.odeme-cuzdan .exit');
+
+const papara_popup = document.querySelector('.odeme-papara');
+const elden_popup = document.querySelector('.odeme-elden');
+const cuzdan_popup = document.querySelector('.odeme-cuzdan');
+
+const papara_iptal_et = document.querySelector('.odeme-papara #iptal-et');
+const elden_iptal_et = document.querySelector('.odeme-elden #iptal-et');
+const cuzdan_iptal_et = document.querySelector('.odeme-cuzdan #iptal-et');
+
+const exit_papara = () => {
+    papara_popup.classList.remove('active');
+}
+
+const exit_elden = () => {
+    elden_popup.classList.remove('active');
+}
+
+const exit_cuzdan = () => {
+    cuzdan_popup.classList.remove('active');
+}
+
+papara_iptal_et.onclick = () => exit_papara();
+elden_iptal_et.onclick = () => exit_elden();
+cuzdan_iptal_et.onclick = () => exit_cuzdan();
+
+papara_exit.onclick = () => exit_papara();
+elden_exit.onclick = () => exit_elden();
+cuzdan_exit.onclick = () => exit_cuzdan();
+
+const papara_ile_ode = document.querySelector('.kuponu-tamamla-popup-container .papara');
+const elden_ode = document.querySelector('.kuponu-tamamla-popup-container .elden');
+const cuzdan_ile_ode = document.querySelector('.kuponu-tamamla-popup-container .cuzdan');
+
+papara_ile_ode.onclick = () => {
+    document.querySelector('.odeme-papara').classList.add('active');
+}
+
+elden_ode.onclick = () => {
+    document.querySelector('.odeme-elden').classList.add('active');
+}
+
+cuzdan_ile_ode.onclick = () => {
+    document.querySelector('.odeme-cuzdan').classList.add('active');
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNGBET</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0c2ddf73cd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="../homepage.html"><div class="logo"><span>BNG</span>BET</div></a>
+        <div class="links">
+            <a href="../kuponlarim/index.html"><i class="fas fa-ticket"></i>Kuponlarım</a>
+            <a href="../gecmisodemeler/index.html"><i class="fas fa-money-bill"></i>Geçmiş Ödemeler</a>
+            <a href="../bakiyeyukle/index.html"><i class="fas fa-coins"></i>Bakiye Yükle</a>
+            <a href="../profil/index.html" class="here"><i class="fas fa-user"></i>Profilim</a>
+        </div>
+        <a href="../cuzdan/index.html">
+            <div class="bakiye" id="yellowbtn">
+                <i class="fas fa-wallet"></i> 5,00 ₺
+            </div>
+        </a>
+        <div class="user-container">
+            <div class="user">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="user-box">
+            <a href="../cuzdan/index.html">
+                <div class="bakiye">
+                    <i class="fas fa-wallet"></i> 5,00 ₺
+                </div>
+            </a>
+            <table>
+                <tr>
+                    <td><i class="fas fa-ticket"></i></td>
+                    <td><a href="../kuponlarim/index.html">Kuponlarım</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-money-bill"></i></td>
+                    <td><a href="../gecmisodemeler/index.html">Geçmiş Ödemeler</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-coins"></i></td>
+                    <td><a href="../bakiyeyukle/index.html">Bakiye Yükle</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-user-pen"></i></td>
+                    <td><a href="#">Profilim</a></td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-arrow-right-from-bracket" id="cikis"></i></td>
+                    <td><a href="../cikis.php" id="cikis">Çıkış Yap</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="main">
+        <div class="section">
+            <h2>Profilim</h2>
+            <div class="info">
+                <i class="fas fa-user"></i>
+                <div class="isim">
+                    Ege Yuca
+                </div>
+                <div class="kadi">
+                    @egeyuca
+                </div>
+                <div class="eposta">
+                    egeyuca@gmail.com
+                </div>
+            </div>
+            <div class="duzenle bakiye" id="yellowbtn">
+                <i class="fas fa-pen"></i>Profili Düzenle
+            </div>
+            <div class="sifre bakiye">
+                <i class="fas fa-key"></i>Şifre Değiştir
+            </div>
+            <div class="stats">
+                <div class="odul">
+                    Kazandığınız Toplam Ödül <span>40,00 ₺</span>
+                </div>
+                <div class="haftabirinciligi">
+                    Hafta Birincilik Sayınız <span>2</span>
+                </div>
+                <div class="kayit-tarihi">
+                    Kayıt Tarihi <span>12.12.2019</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-container popup-profil">
+        <div class="popup">
+            <i class="fas fa-xmark exit"></i>
+            <h2>Profili Düzenle</h2>
+            <form action="">
+                <input type="text" placeholder="Adınız">
+                <input type="text" placeholder="Soyadınız">
+                <input type="email" placeholder="E-Posta Adresiniz">
+                <input type="number" placeholder="Papara Numaranız">
+                <button type="submit"><i class="fas fa-floppy-disk"></i>Kaydet</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup-container popup-sifre">
+        <div class="popup">
+            <i class="fas fa-xmark exit"></i>
+            <h2>Şifre Değiştir</h2>
+            <form action="">
+                <input type="password" placeholder="Mevcut Şifreniz">
+                <input type="password" placeholder="Yeni Şifreniz">
+                <input type="password" placeholder="Yeni Şifreniz Tekrar">
+                <button type="submit"><i class="fas fa-floppy-disk"></i>Kaydet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
